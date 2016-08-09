@@ -4,32 +4,31 @@
 
 Gulp is a build system which allows automate common development tasks, such as code minification, image compression, syntax validation code and much more.
 
-Gulp.js it is build with Javascript and works on Node.js and is Open Source you can find it on Github.
+Gulp.js is built with Javascript and works on Node.js and is Open Source Code you can find it on Github.
 
-###**How does Gulp.js work**
-Gulp.js use Stream Node.js module, it makes it faster to build than Grunt.js.
+###**How does Gulp.js work?**
+Gulp.js uses Stream Node.js module, it makes faster to build than Grunt.js.
 
-Don´t need to write temporarary files in Hard Disk, which means that perform the same tasks as Grunt.js but in less time.
+Don´t need to write temporary files in Hard Disk, which means that perform the same tasks as Grunt.js but in less time.
 
 
 ###*Requeriments*
-+ Have installed Node.js 
++ You need install Node.js 
 
 ###**Installation**
-To install Gulp.js globally in our system
+To install Gulp.js globally in your system
 
 	npm install -g -gulp
 
-If you are using Linux or Mac systems maybe you need administrator permissions adding *sudo* before code.
-Like this:
+If you are using Unix based systems maybe you need administrator privilegies adding *sudo* before command, like this:
 
 	sudo install -g -gulp
 
-to verify was installed correctly:
+to verify it was installed correctly:
 
 	gulp -v 
 
-It is installed correctly, you will see something like this:
+If is installed correctly, you will see something like this:
 
 	CLI version 3.9.1
 	Local version 3.9.1
@@ -38,16 +37,16 @@ It is installed correctly, you will see something like this:
 + *Local version* Is Gulp.js version installed on the local project.
 
 
-Create **gulpfile.js** archive in the folder of your project.
+Create **gulpfile.js** file in the root directory of your project.
 
 After that, enter the command 
 
 	npm init
 
-NPM use the package.json archive to storage all important dates to your application.
-After entering the command, appear a number of questions to properly configure the app . (project name, version, etc.).
+NPM uses the package.json file to store all important datas into your application.
+After entering the command, questions will be prompt to you to properly configure the app. (project name, version, etc.).
 
-With that a file was created called *package.json* and will contain something like that: 
+When configure is finished a new file was created called *package.json* and will contain something like that: 
 
 	{
 	 "name": "gulp-demo",
@@ -73,9 +72,9 @@ And finally **gulp-uglify**
 
 	npm install --save-dev gulp-uglify
 
-Is necessary to add *--save-dev* in command  to add this package as a dependency of development of our project.
+It´s necessary to add *--save-dev* in command  to add this package as a devlopment dependency of your project.
 
-After that you need to create a carpet **js** and other inside called **source** here we keep the files **.js**
+After that you need to create a directory called **js** and other inside called **source** here we keep the files **.js**
 
 Now you need to add this code in gulpfile.js
 
@@ -96,14 +95,14 @@ Now you need to add this code in gulpfile.js
        });
 
 
-And with that the configuration was ready!
+And with that the configuration is ready!
 
 To test use te command:
 
 	gulp demo
 
 
-It everything its correct you finally see something like this:
+If everything its correct you finally see something like this:
 
 	[13:18:30] Using gulpfile ~/Desktop/gulp-      demo/gulpfile.js
 	[13:18:30] Starting 'demo'...
