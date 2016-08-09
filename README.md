@@ -48,17 +48,19 @@ After entering the command, questions will be prompt to you to properly configur
 
 When configure is finished a new file was created called *package.json* and will contain something like that: 
 
-	{
-	 "name": "gulp-demo",
-	"version": "0.0.0",
-	"description": "",
-    "main": "gulpfile.js",
-    "scripts": {
+```json
+{
+  "name": "gulp-demo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Luis",
-    "license": "ISC",
-    }
+  },
+  "author": "Luis",
+  "license": "ISC"
+}
+```
 
 Now you need to add the development dependencies to the project and the first to install will be **Gulp** with the next command:
 
@@ -78,22 +80,23 @@ After that you need to create a directory called **js** and other inside called 
 
 Now you need to add this code in gulpfile.js
 
-```json
-	/*
-	    * Dependencias
-	    */
-	    var gulp = require('gulp'),
-	    concat = require('gulp-concat'),
-	    uglify = require('gulp-uglify');
-		 /*
-	    * Configuración de la tarea 'demo'
-	    */
-	   gulp.task('demo', function () {
-	   gulp.src('js/source/*.js')
-       .pipe(concat('todo.js'))
-       .pipe(uglify())
-       .pipe(gulp.dest('js/build/'))
-       });
+```javascript
+/*
+* Dependencies
+*/
+var gulp = require('gulp'),
+concat = require('gulp-concat'),
+uglify = require('gulp-uglify');
+
+/*
+* Task config: 'demo'
+*/
+gulp.task('demo', function () {
+	gulp.src('js/source/*.js')
+	.pipe(concat('todo.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('js/build/'))
+});
 ```
 
 And with that the configuration is ready!
