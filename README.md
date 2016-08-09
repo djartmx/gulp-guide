@@ -78,6 +78,7 @@ After that you need to create a directory called **js** and other inside called 
 
 Now you need to add this code in gulpfile.js
 
+```json
 	/*
 	    * Dependencias
 	    */
@@ -93,7 +94,7 @@ Now you need to add this code in gulpfile.js
        .pipe(uglify())
        .pipe(gulp.dest('js/build/'))
        });
-
+```
 
 And with that the configuration is ready!
 
